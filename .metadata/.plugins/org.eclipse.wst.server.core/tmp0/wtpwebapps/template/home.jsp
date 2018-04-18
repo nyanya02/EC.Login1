@@ -36,7 +36,7 @@ margin:0 auto;
 #top{
 width:780px;
 margin:30px auto;
-bordor:1px solid #333;
+border:1px solid #333;
 }
 
 #header{
