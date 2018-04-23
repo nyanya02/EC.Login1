@@ -56,6 +56,11 @@ background-color:black;
 clear:both;
 }
 
+#text-link{
+display:inline-block;
+text-align:right;
+}
+
 </style>
 </head>
 <body>
@@ -78,7 +83,7 @@ clear:both;
 
 			<br/>
 
-			<div>
+			<div id="text-link">
 				<span>新規ユーザー登録は
 					<a href='<s:url action="UserCreateAction"/>'>こちら</a>
 				</span>

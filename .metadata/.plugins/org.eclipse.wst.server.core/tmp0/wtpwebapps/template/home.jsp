@@ -58,6 +58,11 @@ background-color:black;
 clear:both;
 }
 
+#text-center{
+display:inline-block;
+text-align:center;
+}
+
 </style>
 </head>
 <body>
@@ -71,7 +76,7 @@ clear:both;
 			<p>Home</p>
 		</div>
 
-		<div>
+		<div id="text-center">
 			<s:form action="HomeAction">
 			<s:submit value="商品購入"/>
 			</s:form>

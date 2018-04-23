@@ -16,7 +16,7 @@ public class MyPageDAO {
 
 	public MyPageDTO getMyPageUserInfo(String item_transaction_id, String user_master_id) throws SQLException{
 
-		String sql = "SELECT iit.item_name, ubit.total_price, ubit.total_count,ubit.pay FROM user_buy_item_transaction ubit LEFT JOIN item_info_transaction iit ONubit.item_transaction_id = iit.id WHERE ubit.item_transaction_id = ? ANDubit.user_master_id = ? ORDER BY ubit.insert_date DESC";
+		String sql = "SELECT iit.item_name, ubit.total_price, ubit.total_count,ubit.pay FROM user_buy_item_transaction ubit LEFT JOIN item_info_transaction iit ON ubit.item_transaction_id = iit.id WHERE ubit.item_transaction_id = ? AND ubit.user_master_id = ? ORDER BY ubit.insert_date DESC";
 
 		try{
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -27,8 +27,8 @@ public class MyPageDAO {
 
 			if(resultSet.next()){
 				myPageDTO.setItemName(resultSet.getString("item_name"));
-				myPageDTO.setTotalPrice(resultSet.getString("totalprice"));
-				myPageDTO.setTotalCount(resultSet.getString("totalcount"));
+				myPageDTO.setTotalPrice(resultSet.getString("total_price"));
+				myPageDTO.setTotalCount(resultSet.getString("total_count"));
 				myPageDTO.setPayment(resultSet.getString("pay"));
 			}
 

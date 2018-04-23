@@ -31,6 +31,7 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 			session.put("total_count", myPageDTO.getTotalCount());
 			session.put("total_payment", myPageDTO.getPayment());
 			session.put("message", "");
+
 		}else if(deleteFlg.equals("1")){
 			delete();
 		}
